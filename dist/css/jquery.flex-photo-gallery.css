@@ -1,0 +1,278 @@
+#images-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+    #images-section::after {
+        content: '';
+        flex-grow: 999999999;
+    }
+
+div.img-wrapper {
+    background-color: rgb(169, 205, 208);
+    position: relative;
+    margin: 2px;
+}
+i.gallery-item-i{
+    display: block;
+}
+img.gallery-item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* Photo Viewer Modal */
+/* html.modal-active, body.modal-active {
+    overflow: hidden;
+} */
+
+#modal-container {
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 1;
+}
+
+#modal-container.blowup {
+    z-index: 1;
+    transform: scale(1);
+}
+#modal-container.blowup .modal-background {
+    background: rgba(0, 0, 0, 0.7);
+}
+#modal-container.blowup .modal-background .modal {
+    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.blowup + .content {
+    z-index: 1;
+    animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.blowup.out {
+    animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.blowup.out .modal-background {
+    animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.blowup.out .modal-background .modal {
+    animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.blowup.out + .content {
+    animation: blowUpContentTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container .modal-background {
+    display: table-cell;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    vertical-align: middle;
+}
+#modal-container .modal-background .modal {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px; 
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    display: -webkit-flex;
+    vertical-align: middle;
+    align-items: center;
+    font-weight: 300;
+    max-height: 70%;
+    max-width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    bottom: 15%;
+    right: 10%;
+    margin: auto;
+}
+
+#modal-container .modal-background .modal .modal-img-wrapper{
+    display: contents;
+}
+
+#modal-container .modal-background .modal h2 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+    font-size: 18px;
+    line-height: 22px;
+}
+#modal-container .modal-background .modal .modal-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+}
+#modal-container .modal-background .modal .modal-svg rect {
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 778;
+    stroke-dashoffset: 778;
+}
+
+.content {
+    min-height: 100%;
+    height: 100%;
+    background: white;
+    position: relative;
+    z-index: 0;
+}
+.content h1 {
+    padding: 75px 0 30px 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+}
+.content .buttons {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.content .buttons .button {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 10px;
+    background: red;
+    font-size: 18px;
+    background-color: #efefef;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.content .buttons .button:hover {
+    color: white;
+    background: #009bd5;
+}
+
+@keyframes blowUpContent {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    99.9% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes blowUpContentTwo {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes blowUpModal {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes blowUpModalTwo {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.modal-close-button{
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 11px;
+    background: rgba(207, 47, 47, 0.7);
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+}
+    .modal-close-button:hover{
+        background: rgb(207, 47, 47);
+    }
+    .modal-close-button span {
+        display: block;
+        transform: rotate(45deg) !important;
+        font-size: 1.5rem;
+        font-weight: bold;
+        user-select: none;
+        -ms-user-select: none;
+    }
+    img.modal-img{
+        max-width: 100%;
+        max-height: 100%;
+        border: 5px solid #fff;
+        margin: auto;
+        background-color: #fff;
+    }
+        .hover-pointer{
+            cursor: pointer;
+        }
+
+    .modal-prev-button, .modal-next-button {
+        cursor: pointer;
+        position: absolute;
+        width: auto;
+        padding: 11px 20px;
+        color: #000;
+        font-weight: bold;
+        font-size: 25px;
+        transition: 0.6s ease;
+        user-select: none;
+        -webkit-user-select: none;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 25px;
+        margin-top: -25px;
+    }
+    .modal-prev-button:hover, .modal-next-button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .modal-prev-button {
+        left: 5px;
+    }
+    .modal-next-button {
+        right: 5px;
+    }
+
+    @media only screen and (max-width: 767px){
+        .modal-prev-button, .modal-next-button{
+            bottom: 5px;
+            top: auto;
+            padding: 0px 10px;
+            padding-bottom: 3px;
+            font-size: 20px;
+        }
+        .modal-close-button{
+            padding: 0px 6px;
+            padding-right: 7px;
+            font-size: 20px;
+        }
+    }

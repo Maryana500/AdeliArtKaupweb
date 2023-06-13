@@ -1,0 +1,316 @@
+#podlozka{
+	width:1830px;
+	height:6000px;
+
+
+}
+#menu{
+	width:1830px;
+	height:100px;
+}
+#podlozka2{
+background-color:white;
+	width:1830px;
+	height:5900px;
+
+}	
+.fon{
+	
+	width:350px;
+	height:5900px;
+	float:left;
+	background-image:url(lisata.jpg);
+
+}
+#podlozka3{
+	background-color:white;
+	width:1130px;
+	height:5880px;
+	float:left;
+	margin-top:20px;
+
+}
+#shapka{
+	background-color:#9999FF;
+	width:1130px;
+	height:330px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:auto 105%;
+	background-image:url(adeli24.jpg);
+	
+}
+#animatsion{
+background-color:white;
+	width:1130px;
+	height:200px;
+	margin-top:150px;
+}	
+.zagolovok{
+background-color:#9999FF;
+	width:1130px;
+	height:70px;
+	margin-top:200px;
+}
+#ofirme{
+background-color:#9999FF;
+	width:1130px;
+	height:600px;
+	margin-top:30px;
+}	
+#uslugi{
+background-color:#9999FF;
+	width:1130px;
+	height:1550px;
+	margin-top:30px;
+}
+#galerry{
+	background-color:#9999FF;
+	width:1130px;
+	height:650px;
+	margin-top:30px;
+}
+	#contact{
+		background-color:#9999FF;
+	width:1130px;
+	height:600px;
+	margin-top:30px;
+}	
+#podval{
+	background-color:#9999FF;
+	width:1830px;
+	height:450px;
+}
+#otstup{
+	width:30px;
+	height:70px;
+}
+/*Настройки к анимации*/
+#font{
+  overflow: hidden;
+  font-size: 65px;
+  font-family:Mistral;
+  text-align: center;
+  color: transparent;
+  backface-visibility: hidden;
+}
+
+span {
+ 
+  text-shadow: 0 0 0 #9999FF;
+  animation: smoky 7s 3s both;
+}
+
+span:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  70% {
+    text-shadow: 0 0 70px #9999FF;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px #9999FF;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px #9999FF; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg)
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px #9999FF;
+    opacity: 0;
+  }
+}
+/*Настройки к анимации*/
+
+
+
+/*Настройки меню*/
+.topnav {
+width:1830px;
+  overflow:hidden;
+  background-color:#9999FF;
+  position:fixed;
+
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color:white;
+  padding:14px 16px;
+  text-decoration:none;
+  font-size:17px;
+  display: block;
+}
+
+.topnav a.icon {
+margin-left:30px;
+margin-top:40px;
+width:30px;
+  display:block;
+  position:fixed;
+   background-repeat:no-repeat;
+  background-image:url(burger.jpg);
+  background-position:center;
+ 
+ 
+}
+
+.active {
+  color:white;
+text-align:center;
+}
+.menu2{
+text-align:center;
+font-family:centschbkcyrill bt;
+font-size:20px;
+font-weight:900;
+}
+.menu2:hover{
+color:white;
+font-size:21px;
+text-shadow: 0 0 10px white,0 0 20px white,0 0 30px white,0 0 40px white;
+}
+#podlozka4{
+	width:250px;
+	height:100px;
+margin-left:43.5%;
+}
+#buttonru{
+	float:left;
+	
+
+}
+#buttonee{
+	float:left;
+}
+/*Настройки меню*/
+
+.zagolovoktext{
+color:white;
+text-align:center;
+font-family:centschbkcyrill bt;
+font-size:45px;
+font-weight:900;
+font-style:italic;
+}
+#otstupzag1{
+	width:250px;
+	height:100px;
+}	
+#otstupzag2{
+	width:250px;
+	height:100px;
+}	
+#otstupzag3{
+	width:250px;
+	height:100px;
+}	
+#otstupzag4{
+	width:250px;
+	height:100px;
+}	
+#ofirmeotstup{
+width:250px;
+	height:100px;	
+}
+.vetka{
+	margin-left:45%;
+	/*margin-bottom:30px;*/
+}
+#uslugiotstup{
+width:250px;
+	height:50px;	
+}
+#podlozkapodval{
+width:1100px;
+	height:150px;
+	margin-left:20%;
+}
+.link{
+	float:left;
+}
+#nado{
+width:520px;
+	height:50px;
+	float:left;
+}
+#otstuppodval{
+	width:250px;
+	height:100px;
+}	
+
+
+#otstuppodval2{
+width:520px;
+	height:50px;
+
+}
+#lisapodval{
+margin-left:43%;
+
+}
+.contactpodlozka{
+width:800px;
+height:150px;
+margin-left:25%;
+}
+.text{
+color:white;
+font-family:centschbkcyrill bt;
+font-size:50px;
+font-weight:900;
+font-style:italic;
+float:left;
+}	
+.float{
+float:left;
+width:700px;
+height:130px;
+}	
+.float2{
+float:left;
+margin-top:5%;
+}	
+#contactotstup{
+width:700px;
+height:55px;
+}
+	#galotstup{
+	width:700px;
+height:60px;
+}
+#galpodlozka{
+	width:1000px;
+height:550px;
+
+margin-left:5%;
+}
+#galerryimg{
+margin-left:60px;
+float:left;
+}
+.float4{
+float:left;
+margin-top:15%;
+}	
+#galnado{
+float:left;	
+width:20px;
+height:20px;
+}
